@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Squash </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<h2 class="log_in_heading">Sign Up Form</h2>
+
+<form action="" class = "sign_in_form" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="userid" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <label for="phonenumber"><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="phonenumber" maxlength="10" pattern="\d{10}" title="Please enter exactly 10 digits" />
+    <br>
+    
+    
+    <br>
+    <br>
+    
+        
+    <button type="submit">Login</button>
+    
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1;height:30px">
+    
+    <span class="psw">Already have an account <a href="/signin"> Login</a></span>
+  </div>
+</form>
+</html>

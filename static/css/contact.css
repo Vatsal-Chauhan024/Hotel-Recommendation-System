@@ -1,0 +1,322 @@
+body{
+    margin: 0px !important;
+    background-image: url("https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1170px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar, .navbar > .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .navbar, .navbar > .container {
+        display: block;
+   }
+}
+.navbar {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background-color: #020323;
+    height: 3vh;
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid #eceef3;
+}
+@media (min-width: 576px) {
+    .navbar .container {
+        max-width: 540px;
+   }
+}
+@media (min-width: 768px) {
+    .navbar .container {
+        max-width: 720px;
+   }
+}
+@media (min-width: 992px) {
+    .navbar .container {
+        max-width: 960px;
+   }
+}
+@media (min-width: 1200px) {
+    .navbar .container {
+        max-width: 1140px;
+   }
+}
+.navbar .navbar-header {
+    display: flex;
+    align-items: center;
+    margin-top: -4vh;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+   }
+}
+.navbar .navbar-header .navbar-toggler {
+    cursor: pointer;
+    border: none;
+    display: none;
+    outline: none;
+
+}
+@media (max-width: 768px) {
+    .navbar .navbar-header .navbar-toggler {
+        display: block;
+   }
+}
+.navbar .navbar-header .navbar-toggler span {
+    height: 2px;
+    width: 22px;
+    background-color: #929aad;
+    display: block;
+}
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+    margin-bottom: 0.2rem;
+}
+.navbar .navbar-header > a {
+    font-weight: 500;
+    color: #3c4250;
+}
+.navbar .navbar-menu {
+    display: flex;
+    align-items: center;
+    flex-basis: auto;
+    flex-grow: 1;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu {
+        display: none;
+        text-align: center;
+   }
+}
+.navbar .navbar-menu.active {
+    display: flex !important;
+}
+.navbar .navbar-menu .navbar-nav {
+    margin-left: auto;
+    flex-direction: row;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav {
+        width: 100%;
+        display: block;
+        border-top: 1px solid #eee;
+        margin-top: 1rem;
+   }
+}
+.navbar .navbar-menu .navbar-nav > li > a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+.navbar .navbar-menu .navbar-nav > li > a:hover {
+    color: #66f;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav > li > a {
+        border-bottom: 1px solid #eceef3;
+   }
+}
+.navbar .navbar-menu .navbar-nav > li.active a {
+    color: #66f;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+    list-style: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-width: 160px;
+    width: auto;
+    white-space: nowrap;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    border-radius: 0.75rem;
+    display: none;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+        position: relative;
+        box-shadow: none;
+   }
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+    color: #3c4250;
+    padding: 0.25rem 1rem;
+    display: block;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+    display: block !important;
+}
+.navbar .navbar-menu .navbar-nav .dropdown > .separator {
+    height: 1px;
+    width: 100%;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    background-color: #eceef3;
+}
+.navbar .navbar-dropdown {
+    position: relative;
+}
+.navbar .navbar-header > a span {
+    color: #66f;
+}
+.navbar .navbar-header h4 {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-header h4 {
+        font-size: 1.05rem;
+   }
+}
+.body-container{
+    text-align: center;
+}
+.sub-heading{
+     margin-top: 4vh;
+     font-size: 4vw;
+     letter-spacing: 6px;
+}
+.heading-h1{
+    flex-wrap: wrap;
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 6.4vw;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    color: rgb(237, 49, 49);
+}
+
+.wrapper{
+    margin-top: 54vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 550px;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .wrapper .title h1{
+    color: #c5ecfd;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .contact-form{
+    display: flex;
+  }
+  
+  .input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+  }
+  
+  .input-fields,
+  .msg{
+    width: 48%;
+  }
+  
+  .input-fields .input,
+  .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid #c5ecfd;
+    padding: 12px;
+    color: #c5ecfd;
+    width: 100%;
+  }
+  
+  .msg textarea{
+    height: 212px;
+  }
+  
+  ::-webkit-input-placeholder {
+
+    color: #c5ecfd;
+  }
+  ::-moz-placeholder {
+
+    color: #c5ecfd;
+  }
+  :-ms-input-placeholder {
+    color: #c5ecfd;
+  }
+  
+  .btn {
+    cursor: pointer;
+      background: #39b7dd;
+      text-align: center;
+      padding: 15px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px){
+    .contact-form{
+      flex-direction: column;
+    }
+    .msg textarea{
+      height: 80px;
+    }
+    .input-fields,
+    .msg{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1400px){
+    .wrapper{
+        margin-top: 25vw;
+    }
+  }
+  @media screen and (max-width: 830px){
+    .wrapper{
+        margin-top: 35vw;
+    }
+  }
+  @media screen and (max-width: 601px){
+    .wrapper{
+        margin-top: 30vh;
+    }
+  }
+  .button{
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+  }

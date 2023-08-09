@@ -1,0 +1,552 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Poppins";
+    font-size: 0.925rem;
+        background-image: url("https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+  
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1170px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar, .navbar > .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .navbar, .navbar > .container {
+        display: block;
+   }
+}
+.navbar {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background-color: #020323;
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid #eceef3;
+    margin-top: -7vh;
+}
+@media (min-width: 576px) {
+    .navbar .container {
+        max-width: 540px;
+   }
+}
+@media (min-width: 768px) {
+    .navbar .container {
+        max-width: 720px;
+   }
+}
+@media (min-width: 992px) {
+    .navbar .container {
+        max-width: 960px;
+   }
+}
+@media (min-width: 1200px) {
+    .navbar .container {
+        max-width: 1140px;
+   }
+}
+.navbar .navbar-header {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+   }
+}
+.navbar .navbar-header .navbar-toggler {
+    cursor: pointer;
+    border: none;
+    display: none;
+    outline: none;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-header .navbar-toggler {
+        display: block;
+   }
+}
+.navbar .navbar-header .navbar-toggler span {
+    height: 2px;
+    width: 22px;
+    background-color: #929aad;
+    display: block;
+}
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+    margin-bottom: 0.2rem;
+}
+.navbar .navbar-header > a {
+    font-weight: 500;
+    color: #3c4250;
+}
+.navbar .navbar-menu {
+    display: flex;
+    align-items: center;
+    flex-basis: auto;
+    flex-grow: 1;
+
+
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu {
+        display: none;
+        text-align: center;
+   }
+}
+.navbar .navbar-menu.active {
+    display: flex !important;
+}
+.navbar .navbar-menu .navbar-nav {
+    margin-left: auto;
+    flex-direction: row;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+   
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav {
+        width: 100%;
+        display: block;
+        border-top: 1px solid #eee;
+        margin-top: 1rem;
+   }
+}
+.navbar .navbar-menu .navbar-nav > li > a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+.navbar .navbar-menu .navbar-nav > li > a:hover {
+    color: #66f;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav > li > a {
+        border-bottom: 1px solid #eceef3;
+   }
+}
+.navbar .navbar-menu .navbar-nav > li.active a {
+    color: #66f;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+    list-style: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-width: 160px;
+    width: auto;
+    white-space: nowrap;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    border-radius: 0.75rem;
+    display: none;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+        position: relative;
+        box-shadow: none;
+   }
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+    color: #3c4250;
+    padding: 0.25rem 1rem;
+    display: block;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+    display: block !important;
+}
+.navbar .navbar-menu .navbar-nav .dropdown > .separator {
+    height: 1px;
+    width: 100%;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    background-color: #eceef3;
+}
+.navbar .navbar-dropdown {
+    position: relative;
+}
+.navbar .navbar-header > a span {
+    color: #66f;
+}
+.navbar .navbar-header h4 {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-header h4 {
+        font-size: 1.05rem;
+   }
+}
+
+
+#wrap{
+    width:20vw;
+}
+.options{
+    padding-left: 20px;
+}
+.form-container{
+    display: grid;
+    place-items: center;
+}
+.form {
+    place-items: center;
+    margin-top: 5vh;
+    position: relative;
+    width: 432px;
+    padding: 29px;
+    background: #7fbfff;;
+    border-radius: 10px;
+}
+.form .date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+}
+.form .date .wrap {
+    grid-area: 0.2222222222;
+}
+.form .rooms {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+}
+.form .rooms .wrap {
+    grid-area: 0.1666666667;
+}
+.form h1 {
+    margin-bottom: 31px;
+}
+.form p {
+    margin: 0 10px 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.form .wrap {
+    width: 100%;
+    height: 70px;
+    padding: 0 10px;
+    background-color: #fff;
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 4px 10px 20px rgba(0, 0, 0, 0.08);
+}
+.form .wrap input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+}
+.form .wrap input[type="number"] {
+    -moz-appearance: textfield;
+}
+.form .wrap .checkOut, .form .wrap .adults, .form .wrap .kids {
+    padding-left: 10px;
+    border-left: 2px solid #f4f4f5;
+}
+.form .show-properties {
+    position: absolute;
+    text-align: center;
+    width: 379px;
+    height: 93px;
+    background: #ff455b;
+    border-radius: 10px;
+    z-index: -1;
+}
+.form .show-properties p {
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 1.3rem;
+    
+    color: #fff;
+}
+.final-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8vh;
+}
+
+.div-left{
+    margin-top: 5vh;
+    margin-right: 3vw;
+    width: 300px;
+    height: auto;
+}
+h2{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+h3{
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-top: 3vh;
+}
+.description{
+    flex-wrap: wrap;
+    margin-top: 1.5vh;
+}
+.right{
+    width: 70vw;
+    text-align: justify;
+}
+
+.select{
+    cursor: pointer;
+    margin-top: 2vh;
+    width: 12vw;
+    height: 8vh;
+    font-size: 1.8vw;
+    background-color: #66f;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+}
+.select:hover{
+    background-color: rgb(77, 77, 247);
+}
+
+
+@media (max-width: 785px) {
+    .final-container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-left{
+        width: 400px;
+    }
+    .select{
+        cursor: pointer;
+        margin-top: 2vh;
+        width: 35vw;
+        height: 6vh;
+        font-size: 28px;
+        background-color: #66f;
+        border: none;
+        color: white;
+        border-radius: 7px;
+    }
+    .select:hover{
+        background-color: rgb(77, 77, 247);
+    }
+    
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dce0e4;
+  padding: 50px 0;
+  font-family: 'Roboto', sans-serif;
+;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  display: inline;
+}
+
+.card-container {
+  background-color: #fff;
+  max-width: 1000px;
+  max-height: auto;
+  margin: auto;
+  display: grid;
+  font-weight: bold;
+  grid-template-columns: 300px 1fr 185px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 50px;
+}
+
+.hotel-image img {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.hotel-info {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #f6a12d;
+}
+
+.reviews ul {
+  display: inline-block;
+  margin: 20px 20px 20px 0;
+/*   font-size: 18px; */
+  border-right: 1px solid #ccc;
+  padding-right: 20px
+}
+
+.reviews ul:last-child {
+  border-right: none;
+}
+
+.stars li {
+  color: #ccc;
+}
+
+.yellow {
+  color: #ffcc00;
+}
+
+.trip-advisor {
+  color: #569742;
+}
+
+.trip-advisor li span {
+  color: #000;
+  font-size: 24px;
+}
+
+.details p {
+  color: #aaa;
+  font-weight: 300;
+}
+
+.hotel-price {
+  position: relative;
+}
+
+.pricing-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 30px 30px 70px 30px;
+  height: 100%;
+}
+
+.guarantee {
+  font-size: 15px;
+  text-align: center;
+  color: #aaa;
+  font-weight: 300;
+}
+
+.guarantee span {
+  color: #f6a12d;
+}
+
+.price h3 {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+
+.price h3 span {
+  font-weight: 300;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.btn-cta {
+  background: #0099cc;
+  border: 0;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  
+  .card-container {
+    display: grid;
+    grid-template-rows: 25% auto 25%;
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+  
+  .guarantee {
+    font-size: 24px;
+  }
+  
+  .price {
+    margin: auto;
+    height: 100px
+  }
+  
+  .price h3 {
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+}
+
+.price h3 span {
+  font-weight: 300;
+  font-size: 16px;
+  color: #aaa;
+}
+  
+}
+
+@media (max-width: 600px) {
+  
+  body {
+    padding: 20px;
+  }
+  
+  .card-container {
+    width: 100%;
+  }
+  
+}
+

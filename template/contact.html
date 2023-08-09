@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+     
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+   
+</head>
+<body>
+      <nav class="navbar">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggler" data-toggle="open-navbar1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="#">
+          <h4>Service<span>Squash</span></h4>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="open-navbar1" style="margin-top: -4vh;">
+        <ul class="navbar-nav">
+          <li ><a href="/">Home</a></li>
+          <li class="navbar-dropdown">
+            <a href="/recm" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+              Recommendations
+            </a>
+
+          </li>
+          <li><a href="/about">About</a></li>
+          <li class="active"><a  href="/contact">Contact</a></li>
+          {% if user == 1 %}
+          <li><a href="/signin">Signin</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+      <div class="body-container">
+        <h1 class="heading-h1">Any Suggestions???</h1>
+        <h2 class="sub-heading">Let Us Know!!!</h2>
+      </div>
+
+      <div class="wrapper">
+        <div class="title">
+          <h1>Reach Us</h1>
+        </div>
+        <form action="https://airform.io/vram51188@gmail.com" method="post">
+        <div class="contact-form">
+          <div class="input-fields">
+
+              <input type="text" class="input" placeholder="Name" required>
+              <input type="text" class="input" placeholder="Email Address" required>
+              <input type="text" class="input" placeholder="Phone" required>
+              <input type="text" class="input" placeholder="Subject" required>
+            </div>
+            <div class="msg">
+              <textarea placeholder="Message"></textarea>
+              <div class="btn"><button class="button">send</button></div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+
+      <script src="{% static 'js/recommend.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Sign up and Sign In Page */
+.log_in_heading{
+    text-align: center;
+
+}
+
+.sign_in_form {
+    border: 3px solid #f1f1f1;
+    width: 40vw;
+    margin-left: 30vw;
+}
+
+.sign_in_form .container input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.sign_in_form .container button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.sign_in_form .container button:hover {
+  opacity: 0.8;
+}
+
+.sign_in_form .container .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+.sign_in_form .container {
+  padding: 16px;
+}
+
+.sign_in_form .container span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  .sign_in_form .container span.psw {
+     display: block;
+     float: none;
+  }
+  .sign_in_form .container .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* Home Page */
+.container_news_web{
+    width: 93vw;
+    height: 60vh;
+    display: grid;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* grid-gap: 10px; */
+    margin: 0 auto;
+
+
+}
+
+.container1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 20vw;
+    /* height: 60vh; */
+    height: auto;
+}
+.container2,.container3,.container4,.container5{
+  width: 30vw;
+  height: 30vh;
+}

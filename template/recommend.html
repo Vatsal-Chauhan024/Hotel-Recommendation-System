@@ -1,0 +1,369 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/recommend.css' %}">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggler" data-toggle="open-navbar1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="#">
+          <h4>Service<span>Squash</span></h4>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="open-navbar1">
+        <ul class="navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li class="active">
+            <a href="/recm" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+              Recommendations
+            </a>
+
+          </li>
+
+
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          {% if user == 1 %}
+          <li><a href="/signin">Signin</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <div class="form-container">
+
+    <form class="form" action="/recm" method="post">
+      {% csrf_token %}
+      <h1>Hotel booking</h1>
+      <p>Location</p>
+      
+        
+        
+        <select id="city" name="city" class="locations" style="width:100%;height:50px;margin-bottom:20px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight:bold;">
+          <option value="Jamshedpur">Jamshedpur</option>
+          <option value="Jaisalmer">Jaisalmer</option>
+          <option value="Kakinada">Kakinada</option>
+          <option value="Jodhpur">Jodhpur</option>
+          <option value="Kalka">Kalka</option>
+          <option value="Kanyakumari">Kanyakumari</option>
+          <option value="Katra">Katra</option>
+          <option value="Karaikal">Karaikal</option>
+          <option value="Kannur">Kannur</option>
+          <option value="Karnal">Karnal</option>
+          <option value="Kargil">Kargil</option>
+          <option value="Kasauli">Kasauli</option>
+          <option value="Jalandhar">Jalandhar</option>
+          <option value="Kanchipuram">Kanchipuram</option>
+          <option value="Kanha">Kanha</option>
+          <option value="Kabini">Kabini</option>
+          <option value="Jammu">Jammu</option>
+          <option value="Kalasa">Kalasa</option>
+          <option value="Jambughoda">Jambughoda</option>
+          <option value="Kasaragod">Kasaragod</option>
+          <option value="Kanker">Kanker</option>
+          <option value="Kanpur">Kanpur</option>
+          <option value="Kashid">Kashid</option>
+          <option value="Kolhapur">Kolhapur</option>
+          <option value="Kodaikanal">Kodaikanal</option>
+          <option value="Kochi">Kochi</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Kedarnath">Kedarnath</option>
+          <option value="Khandala">Khandala</option>
+          <option value="Kinnaur">Kinnaur</option>
+          <option value="Kausani">Kausani</option>
+          <option value="Khajuraho">Khajuraho</option>
+          <option value="Kishangarh">Kishangarh</option>
+          <option value="Kaziranga">Kaziranga</option>
+          <option value="Keonjhar">Keonjhar</option>
+          <option value="Khammam">Khammam</option>
+          <option value="Khajjiar">Khajjiar</option>
+          <option value="Kolad">Kolad</option>
+          <option value="Kharsia">Kharsia</option>
+          <option value="Khimsar">Khimsar</option>
+          <option value="Keylong">Keylong</option>
+          <option value="Kayamkulam">Kayamkulam</option>
+          <option value="Kavali">Kavali</option>
+          <option value="Kattappana">Kattappana</option>
+          <option value="Koderma">Koderma</option>
+          <option value="Kharagpur">Kharagpur</option>
+          <option value="Khejarla">Khejarla</option>
+          <option value="Lonavala">Lonavala</option>
+          <option value="Leh">Leh</option>
+          <option value="Kovalam">Kovalam</option>
+          <option value="Korba">Korba</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Kollam">Kollam</option>
+          <option value="Kumbhalgarh">Kumbhalgarh</option>
+          <option value="kolaghat">Kolaghat</option>
+          <option value="Kumbakonam">Kumbakonam</option>
+          <option value="Kottayam">Kottayam</option>
+          <option value="Kozhikode">Kozhikode</option>
+          <option value="Kothamangalam">Kothamangalam</option>
+          <option value="Ludhiana">Ludhiana</option>
+          <option value="Kushinagar">Kushinagar</option>
+          <option value="Lahaul and Spiti">Lahaul and Spiti</option>
+          <option value="Lachung">Lachung</option>
+          <option value="Lava">Lava</option>
+          <option value="Kota">Kota</option>
+          <option value="Kullu">Kullu</option>
+          <option value="Kurukshetra">Kurukshetra</option>
+          <option value="Kumarakom">Kumarakom</option>
+          <option value="Kottarakkara">Kottarakkara</option>
+          <option value="Lansdowne">Lansdowne</option>
+          <option value="Kurnool">Kurnool</option>
+          <option value="Kundapura">Kundapura</option>
+          <option value="Lavasa">Lavasa</option>
+          <option value="Latur">Latur</option>
+          <option value="Kolli Hills">Kolli Hills</option>
+          <option value="Kurseong">Kurseong</option>
+          <option value="Lachen">Lachen</option>
+          <option value="Kufri">Kufri</option>
+          <option value="Kollur">Kollur</option>
+          <option value="Konaseema">Konaseema</option>
+          <option value="Kukke Subramanya">Kukke Subramanya</option>
+          <option value="Kutch">Kutch</option>
+          <option value="Kosi Kalan">Kosi Kalan</option>
+          <option value="Krishnagiri">Krishnagiri</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Bodhgaya">Bodhgaya</option>
+          <option value="Chail">Chail</option>
+          <option value="Bundi">Bundi</option>
+          <option value="Changanassery">Changanassery</option>
+          <option value="Champawat">Champawat</option>
+          <option value="Chamba">Chamba</option>
+          <option value="Chattarpur">Chattarpur</option>
+          <option value="Bordi">Bordi</option>
+          <option value="Bulandshahar">Bulandshahar</option>
+          <option value="Chengannur">Chengannur</option>
+          <option value="Chamarajanagar">Chamarajanagar</option>
+          <option value="Daman">Daman</option>
+          <option value="Coorg">Coorg</option>
+          <option value="Dahej">Dahej</option>
+          <option value="Darjeeling">Darjeeling</option>
+          <option value="Dehradun">Dehradun</option>
+          <option value="Chikmaglur">Chikmaglur</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Chettinad">Chettinad</option>
+          <option value="Dalhousie">Dalhousie</option>
+          <option value="Corbett">Corbett</option>
+          <option value="Chittorgarh">Chittorgarh</option>
+          <option value="Coonoor">Coonoor</option>
+          <option value="Cuddalore">Cuddalore</option>
+          <option value="Chittoor">Chittoor</option>
+          <option value="Cuttack">Cuttack</option>
+          <option value="Chidambaram">Chidambaram</option>
+          <option value="Chhindwara">Chhindwara</option>
+          <option value="Dapoli">Dapoli</option>
+          <option value="Dandeli">Dandeli</option>
+          <option value="Chiplun">Chiplun</option>
+          <option value="Courtrallam">Courtrallam</option>
+          <option value="Chitrakoot">Chitrakoot</option>
+          <option value="Dead City">Dead City</option>
+          <option value="Churu">Churu</option>
+          <option value="Cherrapunjee">Cherrapunjee</option>
+          <option value="Deoghar">Deoghar</option>
+          <option value="Davanagere">Davanagere</option>
+          <option value="Dechu">Dechu</option>
+          <option value="Dausa">Dausa</option>
+          <option value="Cooch Behar">Cooch Behar</option>
+          <option value="Chitradurga">Chitradurga</option>
+          <option value="Gangtok">Gangtok</option>
+          <option value="Dwarka">Dwarka</option>
+          <option value="Goa">Goa</option>
+          <option value="Diveagar">Diveagar</option>
+          <option value="Digha">Digha</option>
+          <option value="Ganpatipule">Ganpatipule</option>
+          <option value="Dharamshala">Dharamshala</option>
+          <option value="Gaya">Gaya</option>
+          <option value="Dhanaulti">Dhanaulti</option>
+          <option value="Gandhinagar">Gandhinagar</option>
+          <option value="Gadag">Gadag</option>
+          <option value="Ghaziabad">Ghaziabad</option>
+          <option value="Faridabad">Faridabad</option>
+          <option value="Durgapur">Durgapur</option>
+          <option value="Diu">Diu</option>
+          <option value="Dooars">Dooars</option>
+          <option value="Dudhwa National Park">Dudhwa National Park</option>
+          <option value="Diglipur">Diglipur</option>
+          <option value="Erode">Erode</option>
+          <option value="Gandhidham">Gandhidham</option>
+          <option value="Firozabad">Firozabad</option>
+          <option value="Garhmukteshwar">Garhmukteshwar</option>
+          <option value="Dibrugarh">Dibrugarh</option>
+          <option value="Dimapur">Dimapur</option>
+          <option value="Dhanbad">Dhanbad</option>
+          <option value="Fatehpur Sikri">Fatehpur Sikri</option>
+          <option value="Eluru">Eluru</option>
+          <option value="Durg">Durg</option>
+          <option value="Dewas">Dewas</option>
+          <option value="Faizabad">Faizabad</option>
+          <option value="Giridih">Giridih</option>
+          <option value="Dindigul">Dindigul</option>
+          <option value="Dhar">Dhar</option>
+          <option value="Dongargarh">Dongargarh</option>
+          <option value="Dungarpur">Dungarpur</option>
+          <option value="Dhule">Dhule</option>
+          <option value="Dindi">Dindi</option>
+          <option value="Devprayag">Devprayag</option>
+          <option value="Diamond Harbour">Diamond Harbour</option>
+          <option value="Gangavati">Gangavati</option>
+          <option value="Gajraula">Gajraula</option>
+          <option value="Ghazipur">Ghazipur</option>
+          <option value="Hubli-Dharwad">Hubli-Dharwad</option>
+          <option value="Gurgaon">Gurgaon</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Gwalior">Gwalior</option>
+          <option value="Haridwar">Haridwar</option>
+          <option value="Haldwani">Haldwani</option>
+          <option value="Hosur">Hosur</option>
+          <option value="Guwahati">Guwahati</option>
+          <option value="Havelock Island">Havelock Island</option>
+          <option value="Hampi">Hampi</option>
+          <option value="Hissar">Hissar</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Indore">Indore</option>
+          <option value="Jabalpur">Jabalpur</option>
+          <option value="Idukki">Idukki</option>
+          <option value="Igatpuri">Igatpuri</option>
+          <option value="Iritty">Iritty</option>
+          <option value="Itanagar">Itanagar</option>
+          <option value="Jagdalpur">Jagdalpur</option>
+          <option value="Imphal">Imphal</option>
+          <option value="Ichalkaranji">Ichalkaranji</option>
+          </select>
+
+
+          
+
+      
+      <div class="date">
+        <p>Check-in/Out</p>
+        <p></p>
+
+        <div class="wrap" id="wrap">
+          <input id="datepickerIn" name="checkIn" class="checkIn" />
+          <input id="datepickerOut" name="checkOut" class="checkOut" />
+        </div>
+      </div>
+
+      <div class="rooms" id="rooms">
+        <p class="options">Room/Kids/Adult</p>
+        <p class="options"></p>
+        <p class="options"></p>
+
+        <div class="wrap" id="wrap">
+
+          <input type="number" name="room" class="room" />
+
+          <input type="number" name="adults" class="adults" />
+
+          <input type="number" name="kids" class="kids" />
+        </div>
+      </div>
+
+      
+        <input type="submit" value="Show Hotel" style="margin-left: 10%;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 10px;">
+      
+
+    </div>
+  </form>
+  <hr >
+  {% for city,hotel_ov,hotel_star,pageurl,dist,add,fimg,name in frm %}
+
+  <br>
+  <br>
+  <div class="card-container">
+  <div class="hotel-image">
+    <img src="{{fimg}}" alt="hotel exterior">
+  </div>
+  <div class="hotel-info">
+    <div class="heading">
+      <h1 class="title">{{name}}</h1>
+      <h4 class="subtitle">{{add}}</h4>      
+    </div>
+    <div class="reviews">
+      <ul class="stars">
+        <li><span class="yellow"><i class="fa fa-star" aria-hidden="true"></span></i>
+</li>
+        <li><span class="yellow"><i class="fa fa-star" aria-hidden="true"><span></i>
+</li>
+          <li><span class="yellow"><i class="fa fa-star" aria-hidden="true"></span></i>
+</li>
+        <li><i class="fa fa-star" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-star" aria-hidden="true"></i>
+</li>
+      </ul>
+      <ul class="trip-advisor">
+        <li><span><i class="fa fa-tripadvisor" aria-hidden="true"><span></i>
+</li>
+        <li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-circle-o" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-circle-o" aria-hidden="true"></i>
+</li>
+      </ul>
+    </div>
+    <div class="details">
+      <p>{{hotel_ov}}</p>
+    </div>
+  </div>
+  <div class="hotel-price">
+    <div class="pricing-content">
+      <div class="guarantee"><span><i class="fa fa-check-circle" aria-hidden="true"></i>
+</span>{{city}}</div>
+      <div class="price">
+        <h3><span>Distance</span><br>{{dist}}KM</h3>
+      </div>
+    </div>
+    <button class="btn-cta">View Rooms <i class="fa fa-arrow-right" aria-hidden="true"></i>
+</button>
+  </div>
+</div>
+
+
+
+  {% endfor %}
+
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+    $(".wrap #datepickerIn").datepicker({ dateFormat: 'DD,dd MM' });
+    $(".wrap #datepickerOut").datepicker({ dateFormat: 'DD,dd MM' });
+  </script>
+
+</body>
+<script src="{% static 'js/recommend.js' %}">    </script>
+
+</html>

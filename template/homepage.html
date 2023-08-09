@@ -1,0 +1,268 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Page</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css" />
+  <!-- <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/cards-index.css' %}" /> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+<body>
+  <div id="chatbot-container" style="display: none;">
+  <div id="chatbot-interface">
+    <div id="chatbot-header">
+      <p>Want to know something? - Let's chat</p>
+    </div>
+    <div id="chatbot-chat">
+      <div class="chatbot-messages chatbot-received-messages">
+        <p>With what can I help you today?</p>
+      </div>
+      <div class="chatbot-messages chatbot-received-messages">
+        <p>Hello! I am Vatsal, service squash's chatbot</p>
+      </div>
+    </div>
+    <div id="chatbot-footer">
+      <div id="chatbot-input-container">
+        <input type="text" id="chatbot-input" name="chatbot-input" placeholder="Type a command here...">
+      </div>
+      <div id="chatbot-new-message-send-button">
+        <i class="material-icons" id="send-icon">send</i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="chatbot-open-container">
+  <i class="material-icons" id="open-chat-button">chat</i>
+  <i class="material-icons" id="close-chat-button" style="display: none">close</i>
+</div>
+  <nav class="navbar">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggler" data-toggle="open-navbar1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="#">
+          <h4>Service<span>Squash</span></h4>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="open-navbar1">
+        <ul class="navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li class="navbar-dropdown">
+            <a href="/recm" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+              Recommendations
+            </a>
+
+          </li>
+
+
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+
+          {% if user == 1 %}
+          <li><a href="/signin">Signin</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+ <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+
+
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+  <h1 style="margin-top: 8vh !important; letter-spacing: 15px; font-weight: bold;">FEW INSIGHTS!!</h1>
+  <center>
+    <div id="wrapper">
+      <div id="slider-wrap">
+        <ul id="slider">
+          <li><img src="https://media.istockphoto.com/id/104731717/photo/luxury-resort.jpg?s=612x612&w=0&k=20&c=cODMSPbYyrn1FHake1xYz9M8r15iOfGz9Aosy9Db7mI=" alt=""></li>
+          <li><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8&w=1000&q=80" alt=""></li>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXR7tdza4G59V3ZySU1y5gmGzyWlryKE3dQEZCNt35&s" alt=""></li>
+          <li><img src="https://www.gannett-cdn.com/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg" alt=""></li>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQALi54zLcfCYutnH9cqSph5Ao3BZyIE9zcqHf4ogla&s" alt=""></li>
+        </ul>
+
+        <!--controls-->
+        <div class="btns" id="next">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+        <div class="btns" id="previous">
+          <i class="fa fa-arrow-left"></i>
+        </div>
+
+
+        <div id="pagination-wrap">
+          <ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </center>
+
+  <hr>
+  <div class="category-name alfa">Service Offered</div>
+  <br />
+
+  <div class="card-category-1">
+    <div class="basic-card basic-card-aqua">
+      <div class="card-content">
+        <span class="card-title">Best Hotels</span>
+        <p class="card-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s.
+        </p>
+      </div>
+
+      <div class="card-link">
+
+      </div>
+    </div>
+
+    <div class="basic-card basic-card-lips">
+      <div class="card-content">
+        <span class="card-title">Cheapest Price</span>
+        <p class="card-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s.
+        </p>
+      </div>
+
+      <div class="card-link">
+
+      </div>
+    </div>
+
+    <div class="basic-card basic-card-light">
+      <div class="card-content">
+        <span class="card-title">Nearest First</span>
+        <p class="card-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s.
+        </p>
+      </div>
+
+      <div class="card-link">
+
+      </div>
+    </div>
+
+    
+
+      <div class="card-link">
+
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <h1>Ratings</h1>
+  <div class="Reviews">
+    <div class="img-logo">
+      <img class="img-logo-card"
+        src="https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+    </div>
+    <div class="desc">
+      <h3>Amber Selena</h3>
+      <p>
+        Got Full Services and Proper Management Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Amet, blanditiis fugiat! Unde
+        consectetur nihil fugit. Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Libero perferendis aliquid maxime, rem mollitia
+        labore!
+      </p>
+      <div class="ratings">
+        <img src="{% static 'images/star.png' %}" alt="ratings" />
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div class="Book-now">
+    <center><button class="button">BOOK NOW!!</button></center>
+  </div>
+  <footer>
+    <h1 class="Aboutus-heading">Reach Us Out!!!!!</h1>
+    <div class="Aboutus">
+      <div class="left">
+        <ul>
+          <li>FAQ's</li>
+          <li>Community</li>
+          <li>Q&A</li>
+          <li>Address</li>
+          <li>Query</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p>
+          email us: adarsh.vc24@gmail.com <br />
+          could connect us on :
+        </p>
+        <div class="images">
+          <span><img
+              src="data:image/png;base64,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"
+              alt="" /></span>
+          <span>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPvF-iVcljOgCTbWqdOzlIj71xtcJq3CYxVw&usqp=CAU"
+              alt="" />
+          </span>
+          <span>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgSLelqGs3kEPMiGw0jjH3ZPrHdlUqzR8VUg&usqp=CAU"
+              alt="" />
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/recommend.js' %}"></script>
+
+</html>
